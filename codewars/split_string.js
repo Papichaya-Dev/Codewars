@@ -4,14 +4,13 @@
 //second character of the final pair with an underscore ('_').
 function splitString(string) {
   if (string.length % 2 === 0) {
-    console.log(string.length % 6);
-    var pair_two_characters_even = string.split(/(?=(?:..)*$)/);
+    var pair_two_characters = string.split(/(?=(?:..)*$)/);
   } else {
-    var pair_two_characters_odd = string.split(/(?=(?:..)*.$)/);
-    var last_characters = pair_two_characters_odd.splice(-1);
-    var output = pair_two_characters_odd.push(last_characters + "_");
+    var pair_two_characters = string.split(/(?=(?:..)*.$)/);
+    var last_characters = pair_two_characters.splice(-1);
+    var output = pair_two_characters.push(last_characters + "_");
   }
 
-  return { pair_two_characters_even, pair_two_characters_odd };
+  return pair_two_characters;
 }
 console.log("[output]", splitString("abc"));
