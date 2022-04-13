@@ -16,6 +16,8 @@ function longestPalindrome(s) {
   let reverseString = reverseText(s);
   for (let i = 0; i < s.length; i++) {
     for (let j = 0; j < reverseString.length; j++) {
+      console.log(s.substring([i], [j] - 1));
+
       //กรณีที่เป็น palindrome และเท่ากันทั้ง string และ reverse string
       if (s === reverseString) {
         palindrome.push(s);
