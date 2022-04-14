@@ -80,10 +80,3 @@ const starFormatFive = () => {
 };
 console.log("============ This is star format 5 ============ ");
 console.log(starFormatFive());
-
-const arr = [1, 2, 3, 4, 5];
-
-const result = arr.reduce((accumulate, current) => {
-  return accumulate + current;
-}, 0);
-console.log(result); //15;
